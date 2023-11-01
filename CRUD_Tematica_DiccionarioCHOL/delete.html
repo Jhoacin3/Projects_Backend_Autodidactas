@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- cambiar si es dable el lang -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD CHol</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- BOOTSTRAP -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="img/1primeraParte_Puxcatan.png">
+        </div>
+        <div class="form">
+            <form action="delete.php" method="post">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Eliminar Vocabulario CHo´l</h1>
+                    </div>
+                   
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                       <label for="id">Seleccione el ID que quieres eliminar</label>
+                       <input type="text" name="id" id="id" placeholder="Ingrese el ID para eliminar" >
+                    </div>
+                
+            </div>
+            <div class="Agregar-button">
+                <button><a href="delete.php">Eliminar</a></button>
+            </div>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

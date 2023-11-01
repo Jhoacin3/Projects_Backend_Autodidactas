@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(50deg, #FF5400,#FEC35D,#FF2A70,#FFA49F);
+    background-size: 400% 400%;
+    animation: cambiar 10s ease infinite;
+}
+@keyframes cambiar{
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
+.container{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(.300, .300, .300, .300);
+    border-radius: 1rem;
+}
+.form-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fde3a7d7;
+    padding: 1rem;
+}
+.form-image img{
+    width: 33rem;
+    height: 25rem;
+    border-radius: 10px;
+}
+.form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 3rem;
+}
+.form-header{
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-header h1::after{
+    content: '';
+    display: block;
+    width: 7rem;
+    height: 0.3rem;
+    background-color: #6c63ff;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+
+}
+.input-box input,select{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box input:hover{
+    background-color: #eeeee7;
+}
+.input-box select:hover{
+    background-color: #eeeee7;
+}
+.input-box input:focus-visible{
+    outline: 1px solid #6c63ff;
+}
+.input-box select:focus-visible{
+    outline: 1px solid #6c63ff;
+}
+.input-box label{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000000c0;
+}
+.input-box input::placeholder{
+    color: #000000be;
+}
+.Agregar-button button{
+    width: 100%;
+    border: none;
+    background-color: #453ec9;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.Agregar-button button:hover{
+    background-color: #6b63fff1;
+}
+.Agregar-button button a{
+    text-decoration: none;
+    color: #eeeee7;
+    font-size: 0.93rem;
+    font-weight: 500;
+
+}
+
+

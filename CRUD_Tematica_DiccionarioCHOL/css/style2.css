@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    /* relleno alrededor del contenido de un elemento */
+    padding: 0;
+    /* Establece el margen para los cuatro lados */
+    margin: 0;
+    /* Hacer que el padding y el border pasen a formar
+    parte del calculo del ancho de la caja y no se sumen */
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+header{
+    /* ancho */
+    width: 100%;
+    /* alto */
+    height: 80px;
+    /* margen superior para separar */
+    margin-top: 40px;
+    /* Hace que un elemento se coloque respecto al viewport */
+    position: fixed;
+    z-index: 1;
+}
+.container__menu{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    /* el display y justify es para que el logo se ponga a la izquierda y el menu a la derecha  */
+    display: flex;
+    justify-content: space-between;
+
+}
+.logo{
+    /* estos tres etiquetas es para centrar el logo del itss dentro del margen
+    del color */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 60px;
+
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.menu ul{
+    /* hacer que los textos del menu esten uno de lado del otro */
+    display: flex;
+}
+.menu ul li{
+    /* para quitar los puntos del texto del menu */
+    list-style: none;
+    /* para separar los textos en ancho */
+    margin-left: 36px;
+}
+.menu ul li a{
+    /* quitar subrayado debajo del texto */
+    text-decoration: none;
+    /* incrementar el tamaño del texto */
+    font-size: 16px;
+    color: #fff;
+    /* poner texto en mayuscula */
+    text-transform: uppercase;
+
+}
+#selected{
+    background: #F6615D;
+    padding: 10px 40px;
+    border-radius: 50px;
+
+}
+.menu nav img{
+    display: none;
+}
+.menu #btn_menu{
+    display: none;
+}
+
+/* COVER */
+
+.container__cover{
+    width: 100%;
+    height: 800px;
+    background-image: url(../img/image/Background-page.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.cover{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container__cover .text{
+    max-width: 400px;
+}
+.container__cover .text h1{
+    /* texto grande */
+    font-size: 36px;
+    /* grosor */
+    font-weight: 600;
+}
+.container__cover .text p{
+    font-size: 18px;
+    margin-top: 40px;
+}
+.container__cover .imgPeli img{
+    border-radius: 30px;
+    width: 600px;
+    animation: mover-logoPeli 3s linear infinite;
+}
+@keyframes mover-logoPeli {
+    0%{
+        transform: translateY(15px);
+    }50%{
+        transform: translateY(0px);
+    }100%{
+        transform: translateY(15px);
+    }
+    
+}
+
+
+/* Haciendo la pagina RESPPONSIVE */
+@media screen and (max-width:1200px){
+    header{
+        padding:40px;
+    }
+}
+@media screen and (max-width: 720px){
+    .menu nav{
+        position: fixed;
+        top: 0;
+        right: -250px;
+        
+        background: #fff;
+        width: 250px;
+        height: 100vh;
+        padding: 40px;
+        /* el z index es para indicar que este estara arriba de todo */
+        z-index: 1;
+        transition: all 400ms;
+    }
+    .menu ul{
+        flex-direction: column;
+        margin-top: 40px;
+
+    }
+    .menu ul li{
+        margin-top: 30px;
+        /* se cambio left de 0 a -40 */
+        margin-left: -20px;
+
+    }
+    .menu ul li a{
+        color: #bebebe;
+    }
+    #selected{
+        background: none;
+        padding: 0px;
+        border-radius: none;
+        color: #F6615D;
+    
+    }
+    .menu nav img{
+        display: block;
+        width: 80px;
+
+    }
+    #back_menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0,0.5);
+        display: none;
+    }
+    .menu #btn_menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.1);
+        font-size: 24px;
+         border-radius: 50px;
+         cursor: pointer;
+        transition: all 300ms;
+    }
+    .menu #btn_menu:hover{
+
+        background: rgba(255, 255, 255, 0.4);
+    }
+}
+
+
+.container__cover input{
+    padding: 18px 80px;
+    border: none;
+    font-size: 16px;
+    border-radius: 50px;
+    margin-top: 40px;
+    /* decimos que tendra un color de fondo con graduacion (to=a right=derecha seguido de , y los colores) */
+    background: linear-gradient(to right, #fab2b2, #f54d4d);
+    color: #fff;
+    /* para indicarle que es un boton  */
+    cursor: pointer;
+    box-shadow: 1px 1px 30px -12px #f54d4d;
+    transition: all 300ms;
+}
+.container__cover input:hover{
+    box-shadow: 1px 1px 30px -4px #f54d4d;
+
+}
+footer{
+    background-color: #f3f0ee;
+    background-image: linear-gradient(0deg, #f3f0ee 0%, #f3667d 27%);
+    width: 100%;
+    padding: 10px 0px;
+    /* background-image: url(../image/Background-page.svg); */
+    background-size: cover;
+    /* background-color: #f54d4d; */
+    /* -webkit-mask-image: url(../FOOTER_efecto_WAVE1/image/background-footer1.svg);
+    mask-image: url(../FOOTER_efecto_WAVE1/image/background-footer1.svg); */
+    /* animatio llamada wave, con 10 segundos de rapidez (menos mas rapido) que sea lineal y que sea infinita */
+    /* animation: wave 10s linear infinite;
+    overflow: hidden;
+    position: absolute; */
+    
+}
+
+
+.container__footer{
+    /* es para que se pongan delado de la otra RESPONSIVE */
+    display: flex;
+     /* Para decirle que si no entran, que se pongan una encima de la otra RESPONSIVE*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* cambiamos el max de 1200px por este */
+    max-width: 1200px;
+    margin: auto;
+    /* para mover los box mas abajo de la imagen */
+    margin-top: 70px;
+}
+.box__footer{
+    /* para que sus elementos se pongan uno deajo del otro */
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.box__footer .logo img{
+    width: 150px;
+    margin-top:-70px ;
+}
+.box__footer .term{
+    /* aqui estamos diciendo que las letras lorem se encojan a un ancho del que esta
+    ahora y no se alarge */
+    max-width: 350px;
+    /* aqui en margin lo separamos tantito del logo */
+    margin-top: 20px;
+    font-weight: 500;
+    color: #ebe1e1;
+    /* para el tamaño del lorem */
+    font-size: 10px;
+}
+.box__footer h2{
+    /* para espaciar entre el titulo y los links de abajo */
+    margin-bottom: 30px;
+    color: #b5daef;
+    /* grosor del h2 */
+    font-weight: 700;
+    font-size: 22px;
+
+}
+.box__footer a{
+    margin-top: 10px;
+    color: #ede9e9;
+    font-weight: 600;
+}
+.box__footer a:hover{
+    opacity: 0.8;
+}
+.box__footer a .fab{
+    font-size: 20px;
+}
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+.box__copyright p{
+    margin-top: 20px;
+    color: #262626;
+}
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #d7d2d2;
+}
+/* MENU DE PELICULAS.HTML */
