@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de peliculas</title>
+    <link rel="icon" type="image/jpg" href="image/faviconMovie.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+    <style>
+        body{
+          background: url(image/copiar-gafas-cine-espacial-palomitas-maiz.jpg);
+          background-repeat: no-repeat;
+          background-size:100%;
+          /* background: rgb(114, 235, 215);         */
+        }
+        header{
+          margin-top: 0px;
+        }
+        .text-light bg-dark{
+          height: 100px;
+        }
+        main{
+            position: absolute;
+            margin-top: 20px;
+            margin-left: 900px;
+        }
+        label{
+          color: rgb(196, 14, 14);
+        }
+        
+        h4{
+          color: #e41212;
+
+        }
+        h5{
+          color: #0747d3;
+        }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <header>
+        <nav class="text-light bg-dark">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Peliculas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Desarrollo Web</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Jhoacin Escolastico Sanchez</a>
+                </li>
+            </ul>
+          </nav>
+    </header>
+
+    <main>
+        
+           <h4 class="display-7">Eliminar Peliculas</h4>
+          <form id="frmpeliculas"          
+          action="DeletePeliculas.php" method="post">
+            
+          <div> 
+            <label for="inputidpeliculas"
+                class="form-label">
+                Escriba la ID de la pelicula que desea borrar:
+                </label>
+                <div>
+                <input type="text"
+            placeholder= "Escriba la ID"
+            class="form-control-sm"
+            id="imputidpeliculas" name="imputidpeliculas"
+            aria-label="form control-sm"
+            div class="col-1"> </div>
+       
+         <br>
+         <div>
+          <button type="submit" class="btn btn-outline-success"> Eliminar</button>
+          
+
+           <button type="reset" class="btn btn-outline-danger">Cancelar</button>
+
+          </div>
+        </div>
+    </main>
+    
+</body>
+</html>
